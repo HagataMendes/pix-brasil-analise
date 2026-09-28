@@ -1,0 +1,87 @@
+{
+  "EstatisticasTransacoesPix:so_format": {
+    "status": 200,
+    "n": 411876,
+    "segundos": 30.17094,
+    "trecho": "{\"@odata.context\":\"https://was-p.bcnet.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata$metadata#_EstatisticasTransacoesPix\",\"value\":[{\"AnoMes\":202608,\"PAG_PFPJ\":\"PF\",\"REC_PFPJ\":\"PF\",\"PAG_REGIAO\":\"NORDESTE\",\"REC_REGIAO\":\"SUL\",\"PAG_IDADE\":\"mais de 60 anos\",\"REC_IDADE\":\"entre 20 e 29 anos\",\"FORMAINICIACAO\":\"Nao disponivel\",\"NATUREZA\":\"P2P\",\"FINALIDADE\":\"Nao disponivel\",\"VALOR\":9552.71,\"QUANTIDADE\":77},{\"AnoMes\":202509,\"PAG_PFPJ\":\"PF\",\"REC_PFPJ\":\"PF\",\"PAG_REGIAO\":\"SUDESTE\",\"REC_REGIAO\":\"CENTRO-OESTE\",\"PAG_IDADE\":\"entre 50 e 59 anos\",\"REC_IDADE\":null,\"FORMAINICIACAO\":\"Nao disponivel\",\"NA"
+  },
+  "EstatisticasTransacoesPix:top100": {
+    "status": 200,
+    "n": 100,
+    "segundos": 30.764433,
+    "trecho": "{\"@odata.context\":\"https://was-p.bcnet.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata$metadata#_EstatisticasTransacoesPix\",\"value\":[{\"AnoMes\":202608,\"PAG_PFPJ\":\"PF\",\"REC_PFPJ\":\"PF\",\"PAG_REGIAO\":\"NORDESTE\",\"REC_REGIAO\":\"SUL\",\"PAG_IDADE\":\"mais de 60 anos\",\"REC_IDADE\":\"entre 20 e 29 anos\",\"FORMAINICIACAO\":\"Nao disponivel\",\"NATUREZA\":\"P2P\",\"FINALIDADE\":\"Nao disponivel\",\"VALOR\":9552.71,\"QUANTIDADE\":77},{\"AnoMes\":202509,\"PAG_PFPJ\":\"PF\",\"REC_PFPJ\":\"PF\",\"PAG_REGIAO\":\"SUDESTE\",\"REC_REGIAO\":\"CENTRO-OESTE\",\"PAG_IDADE\":\"entre 50 e 59 anos\",\"REC_IDADE\":null,\"FORMAINICIACAO\":\"Nao disponivel\",\"NA"
+  },
+  "EstatisticasTransacoesPix:top10000": {
+    "status": 200,
+    "n": 10000,
+    "segundos": 23.731262,
+    "trecho": "{\"@odata.context\":\"https://was-p.bcnet.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata$metadata#_EstatisticasTransacoesPix\",\"value\":[{\"AnoMes\":202608,\"PAG_PFPJ\":\"PF\",\"REC_PFPJ\":\"PF\",\"PAG_REGIAO\":\"NORDESTE\",\"REC_REGIAO\":\"SUL\",\"PAG_IDADE\":\"mais de 60 anos\",\"REC_IDADE\":\"entre 20 e 29 anos\",\"FORMAINICIACAO\":\"Nao disponivel\",\"NATUREZA\":\"P2P\",\"FINALIDADE\":\"Nao disponivel\",\"VALOR\":9552.71,\"QUANTIDADE\":77},{\"AnoMes\":202509,\"PAG_PFPJ\":\"PF\",\"REC_PFPJ\":\"PF\",\"PAG_REGIAO\":\"SUDESTE\",\"REC_REGIAO\":\"CENTRO-OESTE\",\"PAG_IDADE\":\"entre 50 e 59 anos\",\"REC_IDADE\":null,\"FORMAINICIACAO\":\"Nao disponivel\",\"NA"
+  },
+  "EstatisticasTransacoesPix:top100_skip0": {
+    "status": 500,
+    "n": null,
+    "segundos": 0.743078,
+    "trecho": "/*{\n  \"codigo\" : 500,\n  \"mensagem\" : \"Erro desconhecido\"\n}*/"
+  },
+  "EstatisticasTransacoesPix:top100_skip100": {
+    "status": 500,
+    "n": null,
+    "segundos": 0.227052,
+    "trecho": "/*{\n  \"codigo\" : 500,\n  \"mensagem\" : \"Erro desconhecido\"\n}*/"
+  },
+  "EstatisticasTransacoesPix:mes_sem_aspas": {
+    "status": 400,
+    "n": null,
+    "segundos": 0.726009,
+    "trecho": "/*{\n  \"codigo\" : 400,\n  \"mensagem\" : \"The part '202401' is not defined.\"\n}*/"
+  },
+  "EstatisticasTransacoesPix:mes_2021": {
+    "status": 200,
+    "n": 5,
+    "segundos": 26.251639,
+    "trecho": "{\"@odata.context\":\"https://was-p.bcnet.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata$metadata#_EstatisticasTransacoesPix\",\"value\":[{\"AnoMes\":202302,\"PAG_PFPJ\":\"PF\",\"REC_PFPJ\":\"PF\",\"PAG_REGIAO\":\"CENTRO-OESTE\",\"REC_REGIAO\":\"NORDESTE\",\"PAG_IDADE\":\"entre 30 e 39 anos\",\"REC_IDADE\":\"entre 30 e 39 anos\",\"FORMAINICIACAO\":\"QRES\",\"NATUREZA\":\"P2P\",\"FINALIDADE\":\"Pix\",\"VALOR\":1148814.13,\"QUANTIDADE\":27622},{\"AnoMes\":202509,\"PAG_PFPJ\":\"PF\",\"REC_PFPJ\":\"PF\",\"PAG_REGIAO\":\"SUDESTE\",\"REC_REGIAO\":\"CENTRO-OESTE\",\"PAG_IDADE\":\"entre 50 e 59 anos\",\"REC_IDADE\":null,\"FORMAINICIACAO\":\"Nao disponivel\",\"NATUR"
+  },
+  "TransacoesPixPorMunicipio:so_format": {
+    "status": 200,
+    "n": 183825,
+    "segundos": 8.868964,
+    "trecho": "{\"@odata.context\":\"https://was-p.bcnet.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata$metadata#_TransacoesPixPorMunicipio\",\"value\":[{\"AnoMes\":202506,\"Municipio_Ibge\":3201803,\"Municipio\":\"DIVINO DE SÃO LOURENÇO\",\"Estado_Ibge\":32,\"Estado\":\"ESPÍRITO SANTO\",\"Sigla_Regiao\":\"SE\",\"Regiao\":\"SUDESTE\",\"VL_PagadorPF\":12938270.78,\"QT_PagadorPF\":76860,\"VL_PagadorPJ\":7978732.45,\"QT_PagadorPJ\":4774,\"VL_RecebedorPF\":14692104.78,\"QT_RecebedorPF\":37696,\"VL_RecebedorPJ\":4536454.11,\"QT_RecebedorPJ\":16036,\"QT_PES_PagadorPF\":2479,\"QT_PES_PagadorPJ\":202,\"QT_PES_RecebedorPF\":2468,\"QT_PES_RecebedorPJ\":193}"
+  },
+  "TransacoesPixPorMunicipio:top100": {
+    "status": 200,
+    "n": 100,
+    "segundos": 2.467182,
+    "trecho": "{\"@odata.context\":\"https://was-p.bcnet.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata$metadata#_TransacoesPixPorMunicipio\",\"value\":[{\"AnoMes\":202502,\"Municipio_Ibge\":3201803,\"Municipio\":\"DIVINO DE SÃO LOURENÇO\",\"Estado_Ibge\":32,\"Estado\":\"ESPÍRITO SANTO\",\"Sigla_Regiao\":\"SE\",\"Regiao\":\"SUDESTE\",\"VL_PagadorPF\":11515741.74,\"QT_PagadorPF\":64478,\"VL_PagadorPJ\":4601010.92,\"QT_PagadorPJ\":4016,\"VL_RecebedorPF\":10312462.09,\"QT_RecebedorPF\":34336,\"VL_RecebedorPJ\":3272203.76,\"QT_RecebedorPJ\":13876,\"QT_PES_PagadorPF\":2385,\"QT_PES_PagadorPJ\":183,\"QT_PES_RecebedorPF\":2294,\"QT_PES_RecebedorPJ\":182}"
+  },
+  "TransacoesPixPorMunicipio:top10000": {
+    "status": 200,
+    "n": 10000,
+    "segundos": 2.740367,
+    "trecho": "{\"@odata.context\":\"https://was-p.bcnet.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata$metadata#_TransacoesPixPorMunicipio\",\"value\":[{\"AnoMes\":202607,\"Municipio_Ibge\":3201803,\"Municipio\":\"DIVINO DE SÃO LOURENÇO\",\"Estado_Ibge\":32,\"Estado\":\"ESPÍRITO SANTO\",\"Sigla_Regiao\":\"SE\",\"Regiao\":\"SUDESTE\",\"VL_PagadorPF\":16499650.26,\"QT_PagadorPF\":96152,\"VL_PagadorPJ\":8672356.09,\"QT_PagadorPJ\":6135,\"VL_RecebedorPF\":16579306.92,\"QT_RecebedorPF\":46729,\"VL_RecebedorPJ\":16322532.26,\"QT_RecebedorPJ\":20712,\"QT_PES_PagadorPF\":2761,\"QT_PES_PagadorPJ\":231,\"QT_PES_RecebedorPF\":2696,\"QT_PES_RecebedorPJ\":223"
+  },
+  "TransacoesPixPorMunicipio:top100_skip0": {
+    "status": 500,
+    "n": null,
+    "segundos": 0.738096,
+    "trecho": "/*{\n  \"codigo\" : 500,\n  \"mensagem\" : \"Erro desconhecido\"\n}*/"
+  },
+  "TransacoesPixPorMunicipio:top100_skip100": {
+    "status": 500,
+    "n": null,
+    "segundos": 0.788886,
+    "trecho": "/*{\n  \"codigo\" : 500,\n  \"mensagem\" : \"Erro desconhecido\"\n}*/"
+  },
+  "TransacoesPixPorMunicipio:mes_sem_aspas": {
+    "status": 400,
+    "n": null,
+    "segundos": 0.229405,
+    "trecho": "/*{\n  \"codigo\" : 400,\n  \"mensagem\" : \"The part '202401' is not defined.\"\n}*/"
+  },
+  "TransacoesPixPorMunicipio:mes_2021": {
+    "status": 200,
+    "n": 5,
+    "segundos": 3.40332,
+    "trecho": "{\"@odata.context\":\"https://was-p.bcnet.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata$metadata#_TransacoesPixPorMunicipio\",\"value\":[{\"AnoMes\":202209,\"Municipio_Ibge\":2507903,\"Municipio\":\"JURIPIRANGA\",\"Estado_Ibge\":25,\"Estado\":\"PARAÍBA\",\"Sigla_Regiao\":\"NE\",\"Regiao\":\"NORDESTE\",\"VL_PagadorPF\":8957791.29,\"QT_PagadorPF\":52072,\"VL_PagadorPJ\":3826662.23,\"QT_PagadorPJ\":1654,\"VL_RecebedorPF\":9274157.43,\"QT_RecebedorPF\":46740,\"VL_RecebedorPJ\":3113571.79,\"QT_RecebedorPJ\":3984,\"QT_PES_PagadorPF\":3261,\"QT_PES_PagadorPJ\":87,\"QT_PES_RecebedorPF\":3534,\"QT_PES_RecebedorPJ\":87},{\"AnoMes\":202609,\"Mun"
+  },
+  "metadata": "<?xml version='1.0' encoding='UTF-8'?><edmx:Edmx Version=\"4.0\" xmlns:edmx=\"http://docs.oasis-open.org/odata/ns/edmx\"><edmx:DataServices><Schema xmlns=\"http://docs.oasis-open.org/odata/ns/edm\" Namespace=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos\"><EntityType Name=\"EstatisticasFraudesPix\"><Property Name=\"AnoMes\" Type=\"Edm.Int32\"/><Property Name=\"QtdePixcontestados\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"Qtdecontestacoesaceitas\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"Qtdecontestacoesrejeitadas\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"Qtdecontestacoesaceitasacada100mil\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QtdeUsuarioscommarcacoesdefraude\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QtdeChavesPixcommarcacoesdefraude\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"ValorPixcontestadosaceitos\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QuantidadedevolvidaintegralmentepormeiodoMED\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"ValorPixdevolvidosintegralmente\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QuantidadedevolvidaparcialmentepormeiodoMED\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"ValorPixdevolvidosparcialmente\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"ValorPixresidualnaodevolvido\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"Quantidadedenaodevolvidossaldoinsuficiente\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"ValorPixnaodevolvidossaldoinsuficiente\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"Quantidadedenaodevolvidoscontaencerrada\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"Valornaodevolvidoscontaencerrada\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"Quantidadedenaodevolvidosmotivosdiversos\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"ValorPixnaodevolvidosmotivosdiversos\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"PercentualdeDevolucao\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QtdePixbloqueadoscautelarmenteeliberados\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"ValorPixbloqueadoscautelarmenteeliberados\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QtdePixbloqueadoscautelarmenteedevolvidos\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"ValorPixbloqueadoscautelarmenteedevolvidos\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/></EntityType><EntityType Name=\"EstatisticasTransacoesPix\"><Property Name=\"AnoMes\" Type=\"Edm.Int32\"/><Property Name=\"PAG_PFPJ\" Type=\"Edm.String\"/><Property Name=\"REC_PFPJ\" Type=\"Edm.String\"/><Property Name=\"PAG_REGIAO\" Type=\"Edm.String\"/><Property Name=\"REC_REGIAO\" Type=\"Edm.String\"/><Property Name=\"PAG_IDADE\" Type=\"Edm.String\"/><Property Name=\"REC_IDADE\" Type=\"Edm.String\"/><Property Name=\"FORMAINICIACAO\" Type=\"Edm.String\"/><Property Name=\"NATUREZA\" Type=\"Edm.String\"/><Property Name=\"FINALIDADE\" Type=\"Edm.String\"/><Property Name=\"VALOR\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QUANTIDADE\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/></EntityType><EntityType Name=\"ChavesPix\"><Property Name=\"Data\" Type=\"Edm.Date\"/><Property Name=\"ISPB\" Type=\"Edm.String\"/><Property Name=\"Nome\" Type=\"Edm.String\"/><Property Name=\"NaturezaUsuario\" Type=\"Edm.String\"/><Property Name=\"TipoChave\" Type=\"Edm.String\"/><Property Name=\"qtdChaves\" Type=\"Edm.Int32\"/><Property Name=\"Segmento\" Type=\"Edm.String\"/></EntityType><EntityType Name=\"TransacoesPixPorMunicipio\"><Property Name=\"AnoMes\" Type=\"Edm.Int32\"/><Property Name=\"Municipio_Ibge\" Type=\"Edm.Int32\"/><Property Name=\"Municipio\" Type=\"Edm.String\"/><Property Name=\"Estado_Ibge\" Type=\"Edm.Int32\"/><Property Name=\"Estado\" Type=\"Edm.String\"/><Property Name=\"Sigla_Regiao\" Type=\"Edm.String\"/><Property Name=\"Regiao\" Type=\"Edm.String\"/><Property Name=\"VL_PagadorPF\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QT_PagadorPF\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"VL_PagadorPJ\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QT_PagadorPJ\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"VL_RecebedorPF\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QT_RecebedorPF\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"VL_RecebedorPJ\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QT_RecebedorPJ\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QT_PES_PagadorPF\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QT_PES_PagadorPJ\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QT_PES_RecebedorPF\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"QT_PES_RecebedorPJ\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/></EntityType><EntityType Name=\"CnaePorteRecebedor\"><Property Name=\"AnoMes\" Type=\"Edm.Int32\"/><Property Name=\"tipopessoa\" Type=\"Edm.String\"/><Property Name=\"formainic\" Type=\"Edm.String\"/><Property Name=\"finalidade\" Type=\"Edm.String\"/><Property Name=\"porte\" Type=\"Edm.String\"/><Property Name=\"mei\" Type=\"Edm.String\"/><Property Name=\"cnssecao\" Type=\"Edm.String\"/><Property Name=\"mesmatit\" Type=\"Edm.String\"/><Property Name=\"naturezarel\" Type=\"Edm.String\"/><Property Name=\"qtpagador\" Type=\"Edm.Int32\"/><Property Name=\"qtrecebedor\" Type=\"Edm.Int32\"/><Property Name=\"qtlanliq\" Type=\"Edm.Int32\"/><Property Name=\"vllanliq\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"vlcompra\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/><Property Name=\"vldinespec\" Type=\"Edm.Decimal\" Scale=\"2147483647\"/></EntityType><EntityType Name=\"PixUsuariosCadastradosDICT\"><Property Name=\"DataGraficosPix\" Type=\"Edm.Date\"/><Property Name=\"qtdUsuariosPessoaFisica\" Type=\"Edm.Int32\"/><Property Name=\"qtdUsuariosPessoaJuridica\" Type=\"Edm.Int32\"/><Property Name=\"qtdUsuariosCadastradosDICTTotal\" Type=\"Edm.Int32\"/></EntityType><Function Name=\"EstatisticasFraudesPix\" IsComposable=\"true\"><Parameter Name=\"Database\" Type=\"Edm.String\" Nullable=\"false\"/><ReturnType Type=\"Collection(br.gov.bcb.olinda.servico.Pix_DadosAbertos.EstatisticasFraudesPix)\"/></Function><Function Name=\"EstatisticasTransacoesPix\" IsComposable=\"true\"><Parameter Name=\"Database\" Type=\"Edm.String\" Nullable=\"false\"/><ReturnType Type=\"Collection(br.gov.bcb.olinda.servico.Pix_DadosAbertos.EstatisticasTransacoesPix)\"/></Function><Function Name=\"ChavesPix\" IsComposable=\"true\"><Parameter Name=\"Data\" Type=\"Edm.String\" Nullable=\"false\"/><ReturnType Type=\"Collection(br.gov.bcb.olinda.servico.Pix_DadosAbertos.ChavesPix)\"/></Function><Function Name=\"TransacoesPixPorMunicipio\" IsComposable=\"true\"><Parameter Name=\"DataBase\" Type=\"Edm.String\" Nullable=\"false\"/><ReturnType Type=\"Collection(br.gov.bcb.olinda.servico.Pix_DadosAbertos.TransacoesPixPorMunicipio)\"/></Function><Function Name=\"CnaePorteRecebedor\" IsComposable=\"true\"><Parameter Name=\"Database\" Type=\"Edm.String\" Nullable=\"false\"/><ReturnType Type=\"Collection(br.gov.bcb.olinda.servico.Pix_DadosAbertos.CnaePorteRecebedor)\"/></Function><EntityContainer Name=\"conteiner\"><EntitySet Name=\"_ChavesPix\" EntityType=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.ChavesPix\"/><EntitySet Name=\"PixUsuariosCadastradosDICT\" EntityType=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.PixUsuariosCadastradosDICT\"/><EntitySet Name=\"_EstatisticasFraudesPix\" EntityType=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.EstatisticasFraudesPix\"/><EntitySet Name=\"_CnaePorteRecebedor\" EntityType=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.CnaePorteRecebedor\"/><EntitySet Name=\"_TransacoesPixPorMunicipio\" EntityType=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.TransacoesPixPorMunicipio\"/><EntitySet Name=\"_EstatisticasTransacoesPix\" EntityType=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.EstatisticasTransacoesPix\"/><FunctionImport Name=\"EstatisticasTransacoesPix\" Function=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.EstatisticasTransacoesPix\" EntitySet=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos._EstatisticasTransacoesPix\" IncludeInServiceDocument=\"true\"/><FunctionImport Name=\"ChavesPix\" Function=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.ChavesPix\" EntitySet=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos._ChavesPix\" IncludeInServiceDocument=\"true\"/><FunctionImport Name=\"CnaePorteRecebedor\" Function=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.CnaePorteRecebedor\" EntitySet=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos._CnaePorteRecebedor\" IncludeInServiceDocument=\"true\"/><FunctionImport Name=\"EstatisticasFraudesPix\" Function=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.EstatisticasFraudesPix\" EntitySet=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos._EstatisticasFraudesPix\" IncludeInServiceDocument=\"true\"/><FunctionImport Name=\"TransacoesPixPorMunicipio\" Function=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos.TransacoesPixPorMunicipio\" EntitySet=\"br.gov.bcb.olinda.servico.Pix_DadosAbertos._TransacoesPixPorMunicipio\" IncludeInServiceDocument=\"true\"/></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>"
+}
