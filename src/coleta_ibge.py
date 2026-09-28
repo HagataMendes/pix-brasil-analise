@@ -14,14 +14,36 @@ import pandas as pd
 import requests
 
 RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
+CABECALHOS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+    "Accept": "application/json",
+}
 FONTES = [
+    ("Estimativas de população (IBGE, API de Agregados)",
+     "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[all]"),
+    ("Censo Demográfico 2022 (IBGE, API de Agregados)",
+     "https://servicodados.ibge.gov.br/api/v3/agregados/4709/periodos/2022/variaveis/93?localidades=N6[all]"),
     ("Estimativas de população (IBGE, tabela 6579)", "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/last%201"),
     ("Censo Demográfico 2022 (IBGE, tabela 4709)", "https://apisidra.ibge.gov.br/values/t/4709/n6/all/v/93/p/all"),
 ]
 
 
+def ler_agregados(url: str) -> pd.DataFrame:
+    """Formato da API servicodados: [{variavel, resultados:[{series:[{localidade:{id,nome}, serie:{ano: valor}}]}]}]"""
+    r = requests.get(url, headers=CABECALHOS, timeout=300)
+    r.raise_for_status()
+    linhas = []
+    for serie in r.json()[0]["resultados"][0]["series"]:
+        ano, valor = next(iter(serie["serie"].items()))
+        linhas.append({"Municipio_Ibge": int(serie["localidade"]["id"]), "populacao": pd.to_numeric(valor, errors="coerce"),
+                       "ano_populacao": int(ano)})
+    return pd.DataFrame(linhas).dropna(subset=["populacao"])
+
+
 def ler_sidra(url: str) -> pd.DataFrame:
-    r = requests.get(url, timeout=300)
+    if "servicodados" in url:
+        return ler_agregados(url)
+    r = requests.get(url, headers=CABECALHOS, timeout=300)
     r.raise_for_status()
     linhas = r.json()
     cab, dados = linhas[0], linhas[1:]          # a 1ª linha do SIDRA é o cabeçalho
