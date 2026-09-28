@@ -1,0 +1,23 @@
+{
+  "executado_em": "2026-09-28T16:19:29.370046-03:00",
+  "estatisticas": {
+    "linhas": 741383,
+    "primeiro_mes": 202011,
+    "ultimo_mes": 202608,
+    "meses": 70,
+    "colunas": [
+      "AnoMes",
+      "PAG_PFPJ",
+      "REC_PFPJ",
+      "PAG_REGIAO",
+      "REC_REGIAO",
+      "PAG_IDADE",
+      "REC_IDADE",
+      "FORMAINICIACAO",
+      "NATUREZA",
+      "FINALIDADE",
+      "VALOR",
+      "QUANTIDADE"
+    ]
+  }
+}
