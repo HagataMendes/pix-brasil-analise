@@ -11,21 +11,37 @@ on:
 permissions:
   contents: write
 
+# se uma nova coleta começar, cancela a anterior
+concurrency:
+  group: coleta-pix
+  cancel-in-progress: true
+
 jobs:
   coleta:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install pandas pyarrow requests
-      - run: python src/coleta.py
-      - name: Salva os dados no repositório
+
+      - name: Coleta - estatísticas nacionais
+        run: python src/coleta.py --base estatisticas
+      - name: Salva estatísticas
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/raw
-          git diff --cached --quiet || git commit -m "Atualiza dados do Pix ($(date +%Y-%m-%d))"
+          git diff --cached --quiet || git commit -m "Atualiza estatísticas do Pix ($(date +%Y-%m-%d))"
           git push
+
+      - name: Coleta - municípios
+        run: python src/coleta.py --base municipios
+      - name: Salva municípios
+        if: always()
+        run: |
+          git add data/raw
+          git diff --cached --quiet || git commit -m "Atualiza dados do Pix por município ($(date +%Y-%m-%d))"
+          git pull --rebase && git push

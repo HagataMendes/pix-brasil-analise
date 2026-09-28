@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import json
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
 
@@ -29,8 +30,8 @@ INICIO_PIX = "202011"  # o Pix foi lançado em novembro de 2020
 ENDPOINTS = {
     "estatisticas": ("EstatisticasTransacoesPix", "Database"),
     "municipios": ("TransacoesPixPorMunicipio", "DataBase"),
-    "fraudes": ("EstatisticasFraudesPix", "Database"),
 }
+TRABALHADORES = 6  # meses baixados em paralelo
 
 
 def meses(inicio: str, fim: str) -> list[str]:
@@ -52,13 +53,13 @@ def baixar(recurso: str, param: str, valor: str) -> pd.DataFrame:
             f"{BASE}/{recurso}({param}=@{param})"
             f"?@{param}='{valor}'&$format=json&$top={PAGINA}&$skip={skip}"
         )
-        for tentativa in range(4):
+        for tentativa in range(3):
             try:
-                r = requests.get(url, timeout=120)
+                r = requests.get(url, timeout=90)
                 r.raise_for_status()
                 break
             except requests.RequestException:
-                if tentativa == 3:
+                if tentativa == 2:
                     raise
                 time.sleep(5 * (tentativa + 1))
         lote = r.json().get("value", [])
@@ -75,22 +76,32 @@ def coletar(nome: str, recurso: str, param: str, lista_meses: list[str], log: di
     ja_tem = set(atual["_mes_ref"].unique()) if "_mes_ref" in atual else set()
     recentes = set(lista_meses[-2:])
 
-    novos, info = [], log.setdefault(nome, {"meses": {}})
-    for mes in lista_meses:
-        if mes in ja_tem and mes not in recentes:
-            continue
+    info = log.setdefault(nome, {"meses": {}})
+    pendentes = [m for m in lista_meses if m not in ja_tem or m in recentes]
+
+    def tarefa(mes: str):
+        inicio = time.time()
         try:
             df = baixar(recurso, param, mes)
+            print(f"   {nome} {mes}: {len(df)} linhas ({time.time() - inicio:.0f}s)", flush=True)
+            return mes, df, None
         except Exception as e:  # registra o erro e segue para o próximo mês
-            info["meses"][mes] = f"ERRO: {type(e).__name__}: {e}"[:300]
-            continue
-        info["meses"][mes] = len(df)
-        if df.empty:
-            continue
-        df["_mes_ref"] = mes
-        novos.append(df)
-        info["colunas"] = [c for c in df.columns if c != "_mes_ref"]
-        info["exemplo"] = json.loads(df.head(3).to_json(orient="records", force_ascii=False))
+            print(f"   {nome} {mes}: ERRO {e}", flush=True)
+            return mes, None, f"ERRO: {type(e).__name__}: {e}"[:300]
+
+    novos = []
+    with ThreadPoolExecutor(max_workers=TRABALHADORES) as pool:
+        for mes, df, erro in pool.map(tarefa, pendentes):
+            if erro:
+                info["meses"][mes] = erro
+                continue
+            info["meses"][mes] = len(df)
+            if df.empty:
+                continue
+            df["_mes_ref"] = mes
+            novos.append(df)
+            info["colunas"] = [c for c in df.columns if c != "_mes_ref"]
+            info["exemplo"] = json.loads(df.head(3).to_json(orient="records", force_ascii=False))
 
     if not novos:
         return
@@ -105,6 +116,7 @@ def coletar(nome: str, recurso: str, param: str, lista_meses: list[str], log: di
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--inicio", default=INICIO_PIX)
+    ap.add_argument("--base", choices=list(ENDPOINTS), help="coleta só uma base")
     args = ap.parse_args()
 
     hoje = date.today()
@@ -112,13 +124,15 @@ def main() -> None:
     lista = meses(args.inicio, fim)
     RAW.mkdir(parents=True, exist_ok=True)
 
-    log: dict = {"executado_em": pd.Timestamp.now(tz="America/Sao_Paulo").isoformat()}
+    arq_log = RAW / "_log_coleta.json"
+    log: dict = json.loads(arq_log.read_text()) if arq_log.exists() else {}
+    log["executado_em"] = pd.Timestamp.now(tz="America/Sao_Paulo").isoformat()
     for nome, (recurso, param) in ENDPOINTS.items():
-        print(f"-> {nome}")
+        if args.base and nome != args.base:
+            continue
+        print(f"-> {nome}", flush=True)
         coletar(nome, recurso, param, lista, log)
-
-    (RAW / "_log_coleta.json").write_text(json.dumps(log, ensure_ascii=False, indent=2, default=str))
-    print(json.dumps({k: v.get("linhas_total") for k, v in log.items() if isinstance(v, dict)}, indent=2))
+        arq_log.write_text(json.dumps(log, ensure_ascii=False, indent=2, default=str))
 
 
 if __name__ == "__main__":
