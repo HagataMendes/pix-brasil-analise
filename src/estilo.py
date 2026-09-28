@@ -42,3 +42,26 @@ MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "
 def mes_abrev(data) -> str:
     """Nome do mês em português (o %b do Python sai em inglês)."""
     return MESES[data.month - 1]
+
+
+def pct(valor: float) -> str:
+    """Percentual legível: valores abaixo de 1% aparecem como '<1%'."""
+    return "<1%" if 0 < valor < 1 else f"{br(valor, 0)}%"
+
+
+def rotulos_finais(ax, series: dict, folga: float = 0.05):
+    """
+    Escreve o nome de cada linha ao lado do seu último ponto, afastando os rótulos
+    que ficariam sobrepostos. `series` = {rótulo: pd.Series}; `folga` = distância mínima
+    entre rótulos, como fração da altura do eixo.
+    """
+    y0, y1 = ax.get_ylim()
+    minimo = (y1 - y0) * folga
+    itens = sorted(((s.iloc[-1], nome, s.index[-1]) for nome, s in series.items()))
+    posicoes = []
+    for valor, nome, x in itens:
+        y = valor if not posicoes else max(valor, posicoes[-1][0] + minimo)
+        posicoes.append((y, nome, x))
+    for y, nome, x in posicoes:
+        ax.annotate(nome, (x, y), xytext=(6, 0), textcoords="offset points",
+                    va="center", fontsize=9, color=TEXTO, annotation_clip=False)
