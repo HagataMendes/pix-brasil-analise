@@ -1,0 +1,4 @@
+{
+  "Estimativas de população (IBGE, tabela 6579)": "ERRO: HTTPError: 403 Client Error: Forbidden for url: https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/last%201",
+  "Censo Demográfico 2022 (IBGE, tabela 4709)": "ERRO: HTTPError: 403 Client Error: Forbidden for url: https://apisidra.ibge.gov.br/values/t/4709/n6/all/v/93/p/all"
+}
