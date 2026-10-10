@@ -1,10 +1,10 @@
 {
-  "executado_em": "2026-09-28T18:08:53.175033-03:00",
+  "executado_em": "2026-10-10T13:42:47.314644-03:00",
   "estatisticas": {
-    "linhas": 741383,
+    "linhas": 754733,
     "primeiro_mes": 202011,
-    "ultimo_mes": 202608,
-    "meses": 70,
+    "ultimo_mes": 202609,
+    "meses": 71,
     "colunas": [
       "AnoMes",
       "PAG_PFPJ",
