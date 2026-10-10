@@ -1,5 +1,5 @@
 {
-  "executado_em": "2026-10-10T13:42:47.314644-03:00",
+  "executado_em": "2026-10-10T13:43:12.324376-03:00",
   "estatisticas": {
     "linhas": 754733,
     "primeiro_mes": 202011,
@@ -21,10 +21,10 @@
     ]
   },
   "municipios": {
-    "linhas": 395447,
+    "linhas": 401019,
     "primeiro_mes": 202011,
-    "ultimo_mes": 202609,
-    "meses": 71,
+    "ultimo_mes": 202610,
+    "meses": 72,
     "colunas": [
       "AnoMes",
       "Municipio_Ibge",
