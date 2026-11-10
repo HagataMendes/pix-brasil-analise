@@ -1,5 +1,5 @@
 {
-  "fonte": "Estimativas de população (IBGE, API de Agregados)",
+  "fonte": "Estimativas de população (IBGE, tabela 6579)",
   "municipios": 5571,
   "ano": 2026,
   "populacao_total": 214211951
